@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import math
 import random
 import pygame
@@ -175,10 +169,3 @@ while running:
                 VidelaX_change = 0
             if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                 VidelaY_change = 0
-
-
-# In[ ]:
-
-
-
-
