@@ -6,19 +6,18 @@ from pygame import mixer
 pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("El General")
+icon = pygame.image.load('El General Icon.png')
+pygame.display.set_icon(icon)
 
 background = pygame.image.load('villa.png').convert_alpha()
 
-
 running=True
+
 # Sound
 mixer.music.load("Micky Vainilla - Basta de Amargura.wav")
 mixer.music.set_volume(0.7)
 mixer.music.play(-1)
-
-pygame.display.set_caption("El General")
-icon = pygame.image.load('El General Icon.png')
-pygame.display.set_icon(icon)
 
 #Videla
 VidelaImg = pygame.image.load('Videla.png').convert_alpha()
@@ -92,9 +91,7 @@ def isCollision(SubversivoX, SubversivoY, FalconX, FalconY):
         return False
 
 while running:
-    
     screen.fill((0,0,0)) 
-    
     screen.blit(background, (0,0))
     
     VidelaX += VidelaX_change
